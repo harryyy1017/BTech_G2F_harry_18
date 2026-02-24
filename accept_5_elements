@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    // Declare an integer array with a size of 5
+    int values[5];
+    // Declare a loop counter variable
+    int i;
+
+    printf("Enter 5 integers:\n");
+
+    // Loop to take input for all 5 elements
+    for (i = 0; i < 5; ++i) {
+        printf("Element %d: ", i + 1);
+        // Use scanf to read an integer and store it in the current array element
+        scanf("%d", &values[i]);
+    }
+
+    printf("\nDisplaying integers:\n");
+
+    // Loop to print the elements stored in the array
+    for (i = 0; i < 5; ++i) {
+        printf("%d\n", values[i]);
+    }
+
+    return 0;
+}
