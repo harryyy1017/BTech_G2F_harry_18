@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int side1, side2, side3;
+
+    // Input the three sides of the triangle
+    printf("Enter three sides of the triangle:\\n");
+    scanf("%d%d%d", &side1, &side2, &side3);
+
+    // Check for a valid triangle using the Triangle Inequality Theorem
+    if ((side1 + side2 > side3) && (side1 + side3 > side2) && (side2 + side3 > side1) && side1 > 0 && side2 > 0 && side3 > 0) {
+        printf("The sides form a valid triangle.\\n");
+
+        // Analyze the style (type) of the triangle
+        if (side1 == side2 && side2 == side3) {
+            printf("The triangle is Equilateral (all sides are equal).\\n");
+        } else if (side1 == side2 || side2 == side3 || side1 == side3) {
+            printf("The triangle is Isosceles (exactly two sides are equal).\\n");
+        } else {
+            printf("The triangle is Scalene (all sides are different).\\n");
+        }
+    } else {
+        printf("The sides cannot form a valid triangle (sum of any two sides must be greater than the third, and all sides must be positive).\\n");
+    }
+
+    return 0;
+}
